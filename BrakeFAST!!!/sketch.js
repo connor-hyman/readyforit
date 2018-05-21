@@ -89,7 +89,6 @@ function draw() {
         text("Your score: " + endingScore, width/2, (height/2)+80);
         text("Command + R to try again?", width/2, (height/2)+120);
     } else {
-        player.debug = true;
         DANGER = 7.5
         
     player.velocity.x = 0;
@@ -139,7 +138,6 @@ function draw() {
         newGuy.setCollider("rectangle",0,-20,200,380);
         newGuy.addImage(booth);
         newGuy.scale = 0.4;
-        newGuy.debug = true;
         newGuy.velocity.x = -DANGER;
         hazard1.add(newGuy);
             var newerGuy = createSprite(width, random(enemyHeights), 500,500);
@@ -147,7 +145,6 @@ function draw() {
             newerGuy.setCollider("rectangle",-45,60,200,200);
             newerGuy.scale = 0.43;
             newerGuy.addAnimation("cycle", biking);
-            newerGuy.debug = true;
             newerGuy.velocity.x = -(DANGER+8.5);
             hazard2.add(newerGuy);
                 var newestGuy = createSprite(width, random(enemyHeights2), 500,500);
@@ -155,7 +152,6 @@ function draw() {
                 newestGuy.setCollider("rectangle",0,30,300,200);
                 newestGuy.scale = 0.25;
                 newestGuy.addAnimation("cycle", biking);
-                newestGuy.debug = true;
                 newestGuy.velocity.x = -(DANGER+5);
                 hazard3.add(newestGuy);
         spawnTime = millis(); 
