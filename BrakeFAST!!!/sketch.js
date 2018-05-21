@@ -66,8 +66,6 @@ function setup() {
 
 function draw() {
   background(130,40,255);
-    bg1.debug = true;
-    bg2.debug = true;
     bg1.velocity.x = -DANGER;
     bg2.velocity.x = -DANGER;
     if(bg1.position.x < -540){
@@ -80,10 +78,6 @@ function draw() {
     fill(22,150,87,0);
     noStroke();
     rect(0,(height/2)+30,1080,100);
-    
-    platform.debug = true;
-    platform2.debug = true;
-    platform3.debug = true;
     
     if(gameOver){
         background(0,0,0);
